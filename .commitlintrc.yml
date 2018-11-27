@@ -1,0 +1,3 @@
+# mili upgrade type: cover
+extends:
+  - '@commitlint/config-conventional'
