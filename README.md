@@ -25,7 +25,7 @@ unified()
   .use(markdown)
   .use(remark2rehype)
   // it should be after rehype
-  .use(highlightCode)
+  .use(highlightCode, { preLangClass: false })
   .use(html)
 ```
 
@@ -35,6 +35,14 @@ Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use
 * use the attribute `data-manual` on the `<script>` element you used for prism.
 
   `<script src="prism.js" data-manual></script>`
+
+## Options
+
+- **preLangClass(default: false)**: Whether to copy the `language-` class to the `<pre>` tag.
+
+  Some css style will be set to the `<pre class="language-xxx">`, if you use the official theme.
+
+
 
 ## Load More Languages
 

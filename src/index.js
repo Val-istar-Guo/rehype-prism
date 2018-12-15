@@ -26,15 +26,22 @@ const getLang = node => {
   return lang.replace(/^language-/, '')
 }
 
-const codeVisitor = node => {
+const codeVisitor = cb => node => {
   const lang = getLang(node)
+  cb(lang)
   modifyChildren(parseCode(lang))(node)
 }
 
 const preVisitor = node => {
-  visit(node, codeSelector, codeVisitor)
+  const langs = []
+
+  visit(node, codeSelector, codeVisitor(lang => langs.push(`language-${lang}`)))
+
+  node.properties.className = node.properties.className || []
+  node.properties.className.push(...langs)
 }
 
-export default () => (tree, file) => {
+export default (option = {}) => (tree, file) => {
+  const { preLangClass = false } = option
   visit(tree, preSelector, preVisitor)
 }
