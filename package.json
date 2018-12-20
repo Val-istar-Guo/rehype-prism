@@ -33,7 +33,10 @@
     "unified",
     "markdown",
     "html",
-    "remark"
+    "remark",
+    "highlighting",
+    "syntax",
+    "syntax-highlighting plugin"
   ],
   "author": "Val-istar-Guo <val.istar.guo@gmail.com>",
   "license": "MIT",
