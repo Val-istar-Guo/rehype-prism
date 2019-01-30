@@ -16,17 +16,26 @@ npm i rehype-prism
 
 ```javascript
 import unified from 'unified'
+import rehyper from 'rehyper'
 import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import highlightCode from 'rehype-prism'
 import html from 'rehype-stringify'
 
+// parse markdown to html
 unified()
   .use(markdown)
   .use(remark2rehype)
   // it should be after rehype
   .use(highlightCode, { preLangClass: false })
   .use(html)
+  .parse(/* markstring string */)
+
+// parse code block in html string
+rehyper()
+  .use(highlightCode)
+  .use(html)
+  .parse(/* html string */)
 ```
 
 Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use the plugin in browser. there are two way to do this:
