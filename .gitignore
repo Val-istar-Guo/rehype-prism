@@ -16,3 +16,7 @@ dist/
 # Lock File
 package-lock.json
 yarn.lock
+
+# Test
+coverage
+.nyc_output

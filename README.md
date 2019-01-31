@@ -4,12 +4,14 @@
 [![downloads](https://img.shields.io/npm/dm/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
 [![license](https://img.shields.io/npm/l/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
 [![dependencies](https://img.shields.io/david/Val-istar-Guo/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
+[![coveralls](https://img.shields.io/coveralls/github/Val-istar-Guo/rehype-prism.svg?style=flat-square)](https://coveralls.io/github/Val-istar-Guo/rehype-prism)
 
 
+<!-- custom -->
 The unified plugin used to highlight code block in html with Prism.
 And you have the ability to control whether to copy the `language-` class to `<pre>` tag
 
-<!-- custom -->
+
 ## Install
 
 ```bash
