@@ -19,7 +19,7 @@
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "description": "The unified plugin used to highlight code block in html with Prism",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "directories": {
     "test": "test"
   },
