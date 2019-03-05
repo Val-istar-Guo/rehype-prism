@@ -62,6 +62,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.0",
+    "@commitlint/config-conventional": "^7.1.2",
     "ava": "^1.0.0-beta.4",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -69,19 +71,21 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
+    "commitizen": "^3.0.2",
+    "coveralls": "^3.0.2",
+    "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.0.1",
+    "nyc": "^13.1.0",
+    "rehype-stringify": "^5.0.0",
+    "remark-parse": "^6.0.3",
+    "remark-rehype": "^4.0.0",
     "rollup": "^0.58.0",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-json": "^3.0.0",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "commitizen": "^3.0.2",
-    "cz-conventional-changelog": "^2.1.0",
-    "@commitlint/cli": "^7.2.0",
-    "@commitlint/config-conventional": "^7.1.2",
     "standard-version": "^4.4.0",
-    "coveralls": "^3.0.2",
-    "nyc": "^13.1.0"
+    "unified": "^7.1.0"
   },
   "dependencies": {
     "prismjs": "^1.15.0",
