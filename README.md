@@ -53,7 +53,7 @@ Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use
 
 ## Options
 
-- **preLangClass(default: false)**: Whether to copy the `language-` class to the `<pre>` tag.
+- **preLangClass(default: true)**: Whether to copy the `language-` class to the `<pre>` tag.
 
   Some css style will be set to the `<pre class="language-xxx">`, if you use the official theme.
 
