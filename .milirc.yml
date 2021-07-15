@@ -1,4 +1,6 @@
-repository: https://github.com/Val-istar-Guo/component-template.git
-version: 0.5.3
-mili:
-  version: 1.10.0
+template: npm:@mtpl/component
+version: 4.1.1
+answers:
+  travis: true
+  lock: false
+  module: esnext

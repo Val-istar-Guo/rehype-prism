@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es6",
+    "strict": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "noEmitOnError": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@root/*": [
+        "./*"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths"
+      },
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "index.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ],
+  "ts-node": {
+    "compiler": "ttypescript"
+  }
+}

@@ -1,9 +1,6 @@
-# mili upgrade type: cover
 language: node_js
 node_js:
-  - "node"
-  - "lts/*"
-  - "8"
-
+  - node
+  - lts/*
 after_success:
-  - 'npm run coveralls'
+  - npm run coveralls

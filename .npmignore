@@ -1,18 +1,21 @@
-.DS_Store
+/demo
+/docs
+/templates
+/tests
+/src
 node_modules
+.github
+.nyc_output
+.vscode
 
-# Error Log
-npm-debug.log*
-yarn-error.log
-
-# Config File
+# Dev Config File
+.commitlintrc.yml
+.czrc
+.eslintrc.yml
 .gitignore
-.eslintrc.json
-.eslintignore
-.editorconfig
-.babelrc
+.huskyrc.yml
+.lintstagedrc.yml
+.travis.yml
+ava.config.js
 rollup.config.js
-yarn.lock
-
-# Test File
-test/
+tsconfig.json

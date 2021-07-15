@@ -7,43 +7,42 @@
 [![coveralls](https://img.shields.io/coveralls/github/Val-istar-Guo/rehype-prism.svg?style=flat-square)](https://coveralls.io/github/Val-istar-Guo/rehype-prism)
 
 
-<!-- custom -->
+
+<!-- description -->
 The unified plugin used to highlight code block in html with Prism.
 And you have the ability to control whether to copy the `language-` class to `<pre>` tag
-
-
-## Install
-
-```bash
-npm i rehype-prism
-```
+<!-- description -->
 
 ## Usage
 
+This package is ESM only: Node 12+ is needed to use it and it must be imported instead of required.
+
+<!-- usage -->
 ```javascript
 import unified from 'unified'
 import rehyper from 'rehyper'
-import markdown from 'remark-parse'
-import remark2rehype from 'remark-rehype'
-import highlightCode from 'rehype-prism'
-import html from 'rehype-stringify'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypePrism from 'rehype-prism'
+import rehypeStringify from 'rehype-stringify'
 
 // parse markdown to html
 unified()
   .use(markdown)
   .use(remark2rehype)
   // it should be after rehype
-  .use(highlightCode, { preLangClass: false })
+  .use(rehypePrism)
   .use(html)
   .parse(/* markstring string */)
 
 // parse code block in html string
 rehyper()
-  .use(highlightCode)
+  .use(rehypePrism)
   .use(html)
   .parse(/* html string */)
 ```
 
+## Server Side Render
 Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use the plugin in browser. there are two way to do this:
 
 * set the `window.Prism = { manual: true }`
@@ -51,11 +50,6 @@ Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use
 
   `<script src="prism.js" data-manual></script>`
 
-## Options
-
-- **preLangClass(default: true)**: Whether to copy the `language-` class to the `<pre>` tag.
-
-  Some css style will be set to the `<pre class="language-xxx">`, if you use the official theme.
 
 
 
@@ -69,5 +63,12 @@ Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use
 * If you use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).
   `import 'prismjs'` will auto load the theme setted in babel-plugin-prismjs config.
 * Import theme css manual. e.g. `import 'prismjs/themes/prism-coy.css'`
+<!-- usage -->
 
-<!-- custom -->
+<!-- addition --><!-- addition -->
+
+
+## Contributing & Development
+
+If there is any doubt, it is very welcome to discuss the issue together.
+Please read [Contributor Covenant Code of Conduct](.github/CODE_OF_CONDUCT.md) and [CONTRIBUTING](.github/CONTRIBUTING.md).
