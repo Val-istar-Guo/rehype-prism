@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+## [1.0.0](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v0.1.1...v1.0.0) (2021-07-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* This package is ESM only: Node 12+ is needed to use it and it must be imported instead of required. And remove preLangClass option.
+
+### Features
+
+* prismjs plugins support ([40ba951](https://www.github.com/Val-istar-Guo/rehype-prism/commit/40ba951e8ab5206dffcb28b65f119df14ee5c58d)), closes [#3](https://www.github.com/Val-istar-Guo/rehype-prism/issues/3)
+
+
+### Code Refactoring
+
+* rewrite by typescript and esm only ([7ea69f0](https://www.github.com/Val-istar-Guo/rehype-prism/commit/7ea69f0ef984b3c569ef9cf5356f0324a91b3c0a))
+
 ## [0.1.1](https://github.com/Val-istar-Guo/rehype-prism/compare/v0.1.0...v0.1.1) (2019-03-05)
 
 
