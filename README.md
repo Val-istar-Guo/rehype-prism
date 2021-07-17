@@ -10,15 +10,15 @@
 
 <!-- description -->
 The unified plugin used to highlight code block in html with Prism.
-And you have the ability to control whether to copy the `language-` class to `<pre>` tag
 <!-- description -->
 
 ## Usage
 
+<!-- usage -->
 This package is ESM only: Node 12+ is needed to use it and it must be imported instead of required.
 
-<!-- usage -->
-```javascript
+
+```typescript
 import unified from 'unified'
 import rehyper from 'rehyper'
 import remarkParse from 'remark-parse'
@@ -26,12 +26,16 @@ import remarkRehype from 'remark-rehype'
 import rehypePrism from 'rehype-prism'
 import rehypeStringify from 'rehype-stringify'
 
+// you have to load css manual
+import 'prismjs/themes/prism-coy.css'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+
 // parse markdown to html
 unified()
   .use(markdown)
   .use(remark2rehype)
   // it should be after rehype
-  .use(rehypePrism)
+  .use(rehypePrism, { plugins: ['line-numbers'] })
   .use(html)
   .parse(/* markstring string */)
 
@@ -43,15 +47,21 @@ rehyper()
 ```
 
 ## Server Side Render
-Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use the plugin in browser. there are two way to do this:
+
+`PrismJS` will auto highlight all code at `pre code` after browser `document` loaded.
+
+**Disabled prism autoHighlight** before `import 'rehype-prism'`. there are two way to do this:
 
 * set the `window.Prism = { manual: true }`
 * use the attribute `data-manual` on the `<script>` element you used for prism.
 
   `<script src="prism.js" data-manual></script>`
 
+> Some plugins will not work（e.g. `line-number`）. Because it's only work in browser.
 
+## Load Plugins
 
+The names to use can be found [here](https://github.com/PrismJS/prism/tree/master/plugins).
 
 ## Load More Languages
 
@@ -63,6 +73,7 @@ Must **disabled prism autoHighlight** before `import 'rehype-prism'`, if you use
 * If you use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).
   `import 'prismjs'` will auto load the theme setted in babel-plugin-prismjs config.
 * Import theme css manual. e.g. `import 'prismjs/themes/prism-coy.css'`
+
 <!-- usage -->
 
 <!-- addition --><!-- addition -->

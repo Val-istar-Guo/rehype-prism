@@ -1,7 +1,6 @@
 {
   "name": "rehype-prism",
   "type": "module",
-  "module": "es/index.js",
   "main": "lib/index.js",
   "scripts": {
     "test": "ava",
@@ -24,7 +23,7 @@
     "test:update": "ava -u",
     "prebuild": "npm run clean",
     "prewatch": "npm run copyfile",
-    "watch": "NODE_ENV=development ttsc -p build/tsconfig.lib.json -w",
+    "watch": "NODE_ENV=development ttsc -w",
     "copyfile": "copyfiles -e \"@(build|es|lib|node_modules|tests|doc)/**/*.!(ts)\" -e \"@(README.md|CHANGELOG.md|ava.config.js|backers.md)\" \"**/*.!(ts)\" lib"
   },
   "description": "The unified plugin used to highlight code block in html with Prism",

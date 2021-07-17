@@ -41,8 +41,29 @@ const visitor = (preNode: hast.Element): void => {
 }
 
 const selector = (node: hast.Element): boolean => node.tagName === 'pre'
-const rehypePrism: unified.Plugin = () => (tree: Node) => {
-  visit(tree, selector as any, visitor)
+
+
+interface Options {
+  plugins: (
+    'autolinker'| 'autoloader' | 'command-line' | 'copy-to-clipboard' |
+    'custom-class' | 'data-uri-highlight' | 'diff-highlight' |
+    'download-button' | 'file-highlight' | 'filter-highlight-all' |
+    'highlight-keywords' | 'inline-color' | 'jsonp-highlight' |
+    'keep-markup' | 'line-highlight' | 'line-numbers' | 'match-braces' |
+    'normalize-whitespace' | 'previewers' | 'remove-initial-line-feed' |
+    'show-invisibles' | 'show-language' | 'toolbar' | 'treeview' |
+    'unescaped-markup' | 'wpd'
+  )[]
+}
+
+const rehypePrism: unified.Plugin<[Options?]> = (options?: Options) => {
+  if (options && options.plugins) {
+    for (const plugin of options.plugins) {
+      require(`prismjs/plugins/line-numbers/prism-${plugin}`)
+    }
+  }
+
+  return (tree: Node) => visit(tree, selector as any, visitor)
 }
 
 export default rehypePrism
