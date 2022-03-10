@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+### [1.0.1](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v1.0.0...v1.0.1) (2022-03-10)
+
+
+### Bug Fixes
+
+* cannot find lib/src/index ([c1bc782](https://www.github.com/Val-istar-Guo/rehype-prism/commit/c1bc782ff3beb4bc6a8c734b427e93908933a4ce)), closes [#5](https://www.github.com/Val-istar-Guo/rehype-prism/issues/5)
+
 ## [1.0.0](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v0.1.1...v1.0.0) (2021-07-17)
 
 
