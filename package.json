@@ -93,7 +93,7 @@
     "unist-util-visit": "^3.1.0"
   },
   "peerDependencies": {
-    "unified": "^9 | ^10"
+    "unified": "^9 || ^10"
   },
   "types": "lib/index.d.ts"
 }
