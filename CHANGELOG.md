@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+### [1.0.2](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v1.0.1...v1.0.2) (2022-03-11)
+
+
+### Bug Fixes
+
+* peer deps syntax error ([5b4fad9](https://www.github.com/Val-istar-Guo/rehype-prism/commit/5b4fad9eaed11ad2b4dbabfbd244f80c8b8cfbe8)), closes [#7](https://www.github.com/Val-istar-Guo/rehype-prism/issues/7)
+
 ### [1.0.1](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v1.0.0...v1.0.1) (2022-03-10)
 
 
