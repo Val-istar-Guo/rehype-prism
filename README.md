@@ -19,7 +19,7 @@ This package is ESM only: Node 12+ is needed to use it and it must be imported i
 
 
 ```typescript
-import unified from 'unified'
+import { unified } from 'unified'
 import rehyper from 'rehyper'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
