@@ -1,6 +1,6 @@
 import Prism from 'prismjs'
 import parse from 'rehype-parse'
-import unified from 'unified'
+import unifiedTypes, { unified } from 'unified'
 import * as mdast from 'mdast'
 import * as hast from 'hast'
 import { Node } from 'unist'
@@ -56,7 +56,7 @@ interface Options {
   )[]
 }
 
-const rehypePrism: unified.Plugin<[Options?]> = (options?: Options) => {
+const rehypePrism: unifiedTypes.Plugin<[Options?]> = (options?: Options) => {
   if (options && options.plugins) {
     for (const plugin of options.plugins) {
       require(`prismjs/plugins/line-numbers/prism-${plugin}`)
