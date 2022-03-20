@@ -27,7 +27,7 @@
     "copyfile": "copyfiles -e \"@(build|es|lib|node_modules|tests|doc)/**/*.!(ts)\" -e \"@(README.md|CHANGELOG.md|ava.config.js|backers.md)\" \"**/*.!(ts)\" lib"
   },
   "description": "The unified plugin used to highlight code block in html with Prism",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "directories": {
     "test": "tests"
   },

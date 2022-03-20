@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+## [2.0.0](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v1.0.2...v2.0.0) (2022-03-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* rehype-prism@2 need unified@10. if you want to use unified@9, please install rehype-prism@1
+
+### Features
+
+* optimize for unified v10 ([#10](https://www.github.com/Val-istar-Guo/rehype-prism/issues/10)) ([0b940ad](https://www.github.com/Val-istar-Guo/rehype-prism/commit/0b940add9985e824764691490e092e85d9a2da33))
+
 ### [1.0.2](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v1.0.1...v1.0.2) (2022-03-11)
 
 
