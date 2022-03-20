@@ -1,5 +1,5 @@
 import test from 'ava'
-import unified from 'unified'
+import { unified } from 'unified'
 import markdown from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import html from 'rehype-stringify'
@@ -13,5 +13,5 @@ test('rehype prism', t => {
     .use(remark2rehype)
     .use(html)
 
-  t.snapshot(processor.processSync('```javascript\nconst a = 1\n```').contents)
+  t.snapshot(processor.processSync('```javascript\nconst a = 1\n```').value)
 })
