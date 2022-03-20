@@ -76,7 +76,9 @@ The names to use can be found [here](https://github.com/PrismJS/prism/tree/maste
 
 <!-- usage -->
 
-<!-- addition --><!-- addition -->
+<!-- addition -->
+If in doubt, please submit an issue.
+<!-- addition -->
 
 
 ## Contributing & Development
