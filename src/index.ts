@@ -43,7 +43,7 @@ const visitor = (preNode: hast.Element): void => {
 const selector = (node: hast.Element): boolean => node.tagName === 'pre'
 
 
-interface Options {
+export interface Options {
   plugins: (
     'autolinker'| 'autoloader' | 'command-line' | 'copy-to-clipboard' |
     'custom-class' | 'data-uri-highlight' | 'diff-highlight' |
