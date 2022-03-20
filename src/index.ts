@@ -43,7 +43,7 @@ const visitor = (preNode: hast.Element): void => {
 const selector = (node: hast.Element): boolean => node.tagName === 'pre'
 
 
-interface Options {
+export interface RehypePrismOptions {
   plugins: (
     'autolinker'| 'autoloader' | 'command-line' | 'copy-to-clipboard' |
     'custom-class' | 'data-uri-highlight' | 'diff-highlight' |
@@ -56,7 +56,7 @@ interface Options {
   )[]
 }
 
-const rehypePrism: unifiedTypes.Plugin<[Options?]> = (options?: Options) => {
+const rehypePrism: unifiedTypes.Plugin<[RehypePrismOptions?]> = (options?: RehypePrismOptions) => {
   if (options && options.plugins) {
     for (const plugin of options.plugins) {
       require(`prismjs/plugins/line-numbers/prism-${plugin}`)
