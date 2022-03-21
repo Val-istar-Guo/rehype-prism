@@ -59,7 +59,7 @@ export interface RehypePrismOptions {
 const rehypePrism: unifiedTypes.Plugin<[RehypePrismOptions?]> = (options?: RehypePrismOptions) => {
   if (options && options.plugins) {
     for (const plugin of options.plugins) {
-      require(`prismjs/plugins/line-numbers/prism-${plugin}`)
+      import(`prismjs/plugins/${plugin}/prism-${plugin}.js`)
     }
   }
 
