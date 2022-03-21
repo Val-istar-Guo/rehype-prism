@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+## [2.1.0](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.0.0...v2.1.0) (2022-03-20)
+
+
+### Features
+
+* export option types ([d1c39bc](https://www.github.com/Val-istar-Guo/rehype-prism/commit/d1c39bc5d2a1dba0cc8ec49c0dbbb9c4197b0465))
+
 ## [2.0.0](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v1.0.2...v2.0.0) (2022-03-20)
 
 
