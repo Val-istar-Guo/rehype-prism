@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+### [2.1.1](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.1.0...v2.1.1) (2022-03-21)
+
+
+### Bug Fixes
+
+* syntax error of esm dynamic import plugins([#14](https://www.github.com/Val-istar-Guo/rehype-prism/issues/14)) ([43166de](https://www.github.com/Val-istar-Guo/rehype-prism/commit/43166de3bf5fbf50b3b633e5a5200f9c5f7909ea))
+
 ## [2.1.0](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.0.0...v2.1.0) (2022-03-20)
 
 
