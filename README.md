@@ -15,7 +15,7 @@ The unified plugin used to highlight code block in html with Prism.
 ## Usage
 
 <!-- usage -->
-This package is ESM only: Node 12+ is needed to use it and it must be imported instead of required.
+This package is ESM only: Node 12+ and [unified 10](https://www.npmjs.com/package/unified) is needed to use it and it must be imported instead of required.
 
 
 ```typescript
