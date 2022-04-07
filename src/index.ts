@@ -63,7 +63,7 @@ const rehypePrism: unifiedTypes.Plugin<[RehypePrismOptions?]> = (options?: Rehyp
     }
   }
 
-  return (tree: Node) => visit(tree, selector as any, visitor)
+  return (tree: Node) => visit(tree, selector as any, visitor as any)
 }
 
 export default rehypePrism

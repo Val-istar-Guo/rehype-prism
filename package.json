@@ -84,13 +84,13 @@
     "unified": "^10.1.2"
   },
   "dependencies": {
-    "@types/node": "^14.14.31",
+    "@types/node": ">12",
     "@types/prismjs": "^1.16.6",
     "prismjs": "^1.24.1",
     "rehype-parse": "^7.0.1",
-    "unist-util-is": "^4.1.0",
-    "unist-util-select": "^4.0.0",
-    "unist-util-visit": "^3.1.0"
+    "unist-util-is": "^4 || ^5",
+    "unist-util-select": "^4",
+    "unist-util-visit": "^3 || ^4"
   },
   "peerDependencies": {
     "unified": "^10"

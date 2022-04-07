@@ -9,7 +9,7 @@ import rehypePrism from '../src/index.js'
 test('rehype prism', t => {
   const processor = unified()
     .use(markdown)
-    .use(rehypePrism, {plugins: ["toolbar", "copy-to-clipboard"]})
+    .use(rehypePrism, { plugins: ['toolbar', 'copy-to-clipboard'] })
     .use(remark2rehype)
     .use(html)
 
