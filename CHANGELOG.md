@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+### [2.1.2](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.1.1...v2.1.2) (2022-04-07)
+
+
+### Performance Improvements
+
+* add support for different package versions ([6341ea5](https://www.github.com/Val-istar-Guo/rehype-prism/commit/6341ea546ba2d32069725b3424267ebd4c95d700))
+
 ### [2.1.1](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.1.0...v2.1.1) (2022-03-21)
 
 
