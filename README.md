@@ -1,4 +1,10 @@
-# rehype-prism
+<!-- title -->
+<p align="center" style="padding-top: 40px">
+  <img src="./images/logo.svg?sanitize=true" alt="logo" />
+</p>
+
+<!-- <h1 align="center" style="text-align: center">REHYPE-PRISM</h1> -->
+<!-- title -->
 
 [![version](https://img.shields.io/npm/v/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
 [![downloads](https://img.shields.io/npm/dm/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
