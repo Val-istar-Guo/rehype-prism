@@ -86,7 +86,7 @@
     "@types/node": ">12",
     "@types/prismjs": "^1.16.6",
     "prismjs": "^1.24.1",
-    "rehype-parse": "^7.0.1",
+    "rehype-parse": "^7 || ^ 8",
     "unist-util-is": "^4 || ^5",
     "unist-util-select": "^4",
     "unist-util-visit": "^3 || ^4"
