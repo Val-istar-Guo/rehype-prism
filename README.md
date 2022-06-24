@@ -38,17 +38,17 @@ import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 // parse markdown to html
 unified()
-  .use(markdown)
-  .use(remark2rehype)
+  .use(remarkParse)
+  .use(remarkRehype)
   // it should be after rehype
   .use(rehypePrism, { plugins: ['line-numbers'] })
-  .use(html)
+  .use(rehypeStringify)
   .parse(/* markstring string */)
 
 // parse code block in html string
 rehyper()
   .use(rehypePrism)
-  .use(html)
+  .use(rehypeStringify)
   .parse(/* html string */)
 ```
 
