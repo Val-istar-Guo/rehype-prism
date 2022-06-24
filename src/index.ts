@@ -28,7 +28,7 @@ const visitor = (preNode: hast.Element): void => {
   const html = Prism.highlight(textNode.value, Prism.languages[lang], lang)
   const tree = unified()
     .use(parse, { fragment: true })
-    .parse(html) as hast.Element
+    .parse(html) as unknown as hast.Element
 
   if (!preNode.properties) preNode.properties = {}
   if (!preNode.properties.className) preNode.properties.className = []
