@@ -8,8 +8,10 @@
     "noImplicitAny": false,
     "declaration": true,
     "baseUrl": "./",
+    "rootDir": "./",
     "allowSyntheticDefaultImports": true,
     "noEmitOnError": true,
+    "skipLibCheck": true,
     "paths": {
       "@/*": [
         "src/*"
@@ -31,13 +33,7 @@
   "exclude": [
     "node_modules"
   ],
-  "files": [
-    "index.ts"
-  ],
   "include": [
     "src/**/*.ts"
-  ],
-  "ts-node": {
-    "compiler": "ttypescript"
-  }
+  ]
 }

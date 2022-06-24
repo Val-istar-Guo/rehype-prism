@@ -1,17 +1,27 @@
 import test from 'ava'
 import { unified } from 'unified'
-import markdown from 'remark-parse'
+import remarkParse from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import html from 'rehype-stringify'
 import rehypePrism from '../src/index.js'
 
 
-test('rehype prism', t => {
+test('rehype prism with language', t => {
   const processor = unified()
-    .use(markdown)
-    .use(rehypePrism, { plugins: ['toolbar', 'copy-to-clipboard'] })
+    .use(remarkParse)
     .use(remark2rehype)
+    .use(rehypePrism, { plugins: ['toolbar', 'copy-to-clipboard'] })
     .use(html)
 
-  t.snapshot(processor.processSync('```javascript\nconst a = 1\n```').value)
+  t.snapshot(processor.processSync('```javascript\nconst a = 1\n```\n').value)
+})
+
+test('rehype prism without language', t => {
+  const processor = unified()
+    .use(remarkParse)
+    .use(remark2rehype)
+    .use(rehypePrism, { plugins: ['toolbar', 'copy-to-clipboard'] })
+    .use(html)
+
+  t.snapshot(processor.processSync('```\nconst a = 1\n```\n').value)
 })
