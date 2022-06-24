@@ -83,8 +83,11 @@
     "unified": "^10.1.2"
   },
   "dependencies": {
+    "@types/hast": "*",
+    "@types/mdast": "*",
     "@types/node": ">12",
     "@types/prismjs": "^1.16.6",
+    "@types/unist": "*",
     "prismjs": "^1.24.1",
     "rehype-parse": "^7 || ^ 8",
     "unist-util-is": "^4 || ^5",
