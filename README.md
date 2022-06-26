@@ -26,7 +26,7 @@ This package is ESM only: Node 12+ and [unified 10](https://www.npmjs.com/packag
 
 ```typescript
 import { unified } from 'unified'
-import rehyper from 'rehyper'
+import rehype from 'rehype'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypePrism from 'rehype-prism'
@@ -46,7 +46,7 @@ unified()
   .parse(/* markstring string */)
 
 // parse code block in html string
-rehyper()
+rehype()
   .use(rehypePrism)
   .use(rehypeStringify)
   .parse(/* html string */)
