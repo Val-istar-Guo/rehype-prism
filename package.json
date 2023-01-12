@@ -90,11 +90,12 @@
     "@types/node": ">12",
     "@types/prismjs": "^1.16.6",
     "@types/unist": "*",
+    "hastscript": "^7.2.0",
     "prismjs": "^1.24.1",
     "rehype-parse": "^7 || ^ 8",
     "unist-util-is": "^4 || ^5",
-    "unist-util-select": "^4",
-    "unist-util-visit": "^3 || ^4"
+    "unist-util-select": "^4.0.2",
+    "unist-util-visit": "^4.1.1"
   },
   "peerDependencies": {
     "unified": "^10"
