@@ -26,7 +26,7 @@
     "watch": "NODE_ENV=development ttsc -w"
   },
   "description": "The unified plugin used to highlight code block in html with Prism",
-  "version": "2.1.3",
+  "version": "2.2.0",
   "directories": {
     "test": "tests"
   },
