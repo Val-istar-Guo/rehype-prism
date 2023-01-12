@@ -2,10 +2,10 @@ import 'prismjs'
 import unifiedTypes from 'unified'
 import { Element } from 'hast'
 import { visit } from 'unist-util-visit'
-import { preElementSelector } from './pre-element-selector'
-import { RehypePrismOptions } from './rehype-prism-options'
-import { parseCodeVisitor } from './parse-code-vistor'
 import { Test } from 'unist-util-is'
+import { preElementSelector } from './pre-element-selector.js'
+import { RehypePrismOptions } from './rehype-prism-options.js'
+import { parseCodeVisitor } from './parse-code-vistor.js'
 
 
 const rehypePrism: unifiedTypes.Plugin<[RehypePrismOptions?], Element> = (options?: RehypePrismOptions) => {

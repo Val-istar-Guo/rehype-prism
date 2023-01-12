@@ -1,6 +1,5 @@
 export default {
   files: ['tests/**/*.ts', '!tests/**/*.before-each.ts'],
-  // extensions: { ts: 'module' },
   typescript: {
     rewritePaths: {
       'tests/': 'lib/tests/',

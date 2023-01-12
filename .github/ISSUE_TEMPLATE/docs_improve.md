@@ -1,7 +1,8 @@
 ---
 name: Document improve
 about: Improve document quality or improve document content
-
+title: 'Document: '
+labels: documentation
 ---
 <!-- Please delete unused section -->
 

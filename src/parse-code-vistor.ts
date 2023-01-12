@@ -6,11 +6,11 @@ import { Visitor } from 'unist-util-visit/complex-types'
 import { unified } from 'unified'
 import { h } from 'hastscript'
 import { select } from 'unist-util-select'
-import { getLang } from './get-lang'
-import { Checker } from './checker'
-import { appendClassName } from './append-class-name'
-import { getLineNumber } from './get-line-number'
-import { RehypePrismOptions } from './rehype-prism-options'
+import { getLang } from './get-lang.js'
+import { Checker } from './checker.js'
+import { appendClassName } from './append-class-name.js'
+import { getLineNumber } from './get-line-number.js'
+import { RehypePrismOptions } from './rehype-prism-options.js'
 
 
 const parser = unified()

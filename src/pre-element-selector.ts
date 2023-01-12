@@ -1,5 +1,5 @@
 import { Test } from 'unist-util-is'
-import { Checker } from './checker'
+import { Checker } from './checker.js'
 
 
 export function preElementSelector(): Test {

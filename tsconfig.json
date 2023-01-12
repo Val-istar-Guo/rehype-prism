@@ -35,5 +35,8 @@
   ],
   "include": [
     "src/**/*.ts"
-  ]
+  ],
+  "ts-node": {
+    "compiler": "ttypescript"
+  }
 }
