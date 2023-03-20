@@ -13,12 +13,15 @@
 [![coveralls](https://img.shields.io/coveralls/github/Val-istar-Guo/rehype-prism.svg?style=flat-square)](https://coveralls.io/github/Val-istar-Guo/rehype-prism)
 
 <!-- description -->
+
 The unified plugin used to highlight code block in html with Prism.
+
 <!-- description -->
 
 ## Usage
 
 <!-- usage -->
+
 This package is ESM only: Node 12+ and [unified 10](https://www.npmjs.com/package/unified) is needed to use it and it must be imported instead of required.
 
 ```typescript
@@ -33,6 +36,12 @@ import rehypeStringify from 'rehype-stringify'
 import 'prismjs/themes/prism-coy.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
+// load languages manual
+// import 'prismjs/components/prism-{language}'
+import 'prismjs/components/prism-go'
+import 'prismjs/components/prism-java'
+import 'prismjs/components/prism-python'
+
 // parse markdown to html
 unified()
   .use(remarkParse)
@@ -40,15 +49,15 @@ unified()
   // it should be after rehype
   .use(rehypePrism, { plugins: ['line-numbers'] })
   .use(rehypeStringify)
-  .parse(/* markstring string */)
-  // .processSync(/* markdown string */)
+  .parse(/* markdown string */)
+// .processSync(/* markdown string */)
 
 // parse code block in html string
 rehype()
   .use(rehypePrism)
   .use(rehypeStringify)
   .parse(/* html string */)
-  // .processSync(/* html string */)
+// .processSync(/* html string */)
 ```
 
 ## Server Side Render
@@ -57,8 +66,8 @@ rehype()
 
 **Disabled prism autoHighlight** before `import 'rehype-prism'`. there are two way to do this:
 
-* set the `window.Prism = { manual: true }`
-* use the attribute `data-manual` on the `<script>` element you used for prism.
+- set the `window.Prism = { manual: true }`
+- use the attribute `data-manual` on the `<script>` element you used for prism.
 
   `<script src="prism.js" data-manual></script>`
 
@@ -68,21 +77,25 @@ rehype()
 
 The names to use can be found [here](https://github.com/PrismJS/prism/tree/master/plugins).
 
+> line-number plugin is reimplemented by rehype-prism
+
 ## Load More Languages
 
-* Use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).(Recommend)
-* Use `loadLanguages()` provided by `prismjs`.(don't use `loadLanguages()` with Webpack or another bundler)
+- Use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).(Recommend)
+- Use `loadLanguages()` provided by `prismjs`.(don't use `loadLanguages()` with Webpack or another bundler)
 
 ## Load Themes
 
-* If you use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).
+- If you use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).
   `import 'prismjs'` will auto load the theme setted in babel-plugin-prismjs config.
-* Import theme css manual. e.g. `import 'prismjs/themes/prism-coy.css'`
+- Import theme css manual. e.g. `import 'prismjs/themes/prism-coy.css'`
 
 <!-- usage -->
 
 <!-- addition -->
+
 If in doubt, please submit an issue.
+
 <!-- addition -->
 
 ## Contributing & Development
