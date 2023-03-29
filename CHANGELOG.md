@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+### [2.2.2](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.2.1...v2.2.2) (2023-03-29)
+
+
+### Bug Fixes
+
+* don't import primjs toolbar and copy-to-clipboard plugins ([1bab898](https://www.github.com/Val-istar-Guo/rehype-prism/commit/1bab898cd7ca809c514daf0ebb6869836aaffd03))
+
 ### [2.2.1](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.2.0...v2.2.1) (2023-03-29)
 
 
