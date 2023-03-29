@@ -1,5 +1,5 @@
 import { Element } from 'hast'
-import { PluginOptions } from './plugin-options'
+import { PluginOptions } from './plugin-options.js'
 
 
 export interface PluginContext {

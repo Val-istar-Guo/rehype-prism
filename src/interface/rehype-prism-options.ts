@@ -1,4 +1,4 @@
-import { RehypePrismPlugin } from './rehype-prism-plugin'
+import { RehypePrismPlugin } from './rehype-prism-plugin.js'
 
 
 export interface RehypePrismOptions {

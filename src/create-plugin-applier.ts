@@ -1,5 +1,5 @@
-import { PluginOptions } from '@/interface/plugin-options'
-import { RehypePrismPlugin } from '@/interface/rehype-prism-plugin'
+import { PluginOptions } from './interface/plugin-options.js'
+import { RehypePrismPlugin } from './interface/rehype-prism-plugin.js'
 import { PluginContext } from './interface/plugin-context.js'
 import { createCopyToClipboardPlugin } from './plugins/copy-to-clipboard.js'
 import { createLineNumberPlugin } from './plugins/line-numbers.js'

@@ -1,5 +1,5 @@
 import { h } from 'hastscript'
-import { PluginContext } from '@/interface/plugin-context'
+import { PluginContext } from '@/interface/plugin-context.js'
 
 interface Setting {
   'copy': 'Copy'
