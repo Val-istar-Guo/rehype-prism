@@ -10,19 +10,22 @@ import { RehypePrismOptions } from './interface/rehype-prism-options.js'
 
 import { isElementNode } from './utils/is-element-node.js'
 import { isTextNode } from './utils/is-text-node.js'
-import { applyPlugin } from './plugins/apply-plugin.js'
+import { createPluginApplier } from './create-plugin-applier.js'
+import { selectCodeElement } from './utils/select-code-element.js'
 
 
 const parser = unified()
   .use(rehypeParse, { fragment: true })
 
-export function parseCodeVisitor(options?: RehypePrismOptions): Visitor<ElementContent, Parent> {
-  return node => {
-    if (!isElementNode(node) || node.tagName !== 'pre') return
+export function createParseCodeVisitor(options?: RehypePrismOptions): Visitor<ElementContent, Parent> {
+  const applyPlugin = createPluginApplier(options?.plugins || [])
+
+  return (node, index, parentNode) => {
+    if (!isElementNode(node) || node.tagName !== 'pre' || index === null || parentNode === null) return
     const preElement = node
 
-    const codeElement = select('[tagName=code]', preElement)
-    if (!isElementNode(codeElement)) return
+    const codeElement = selectCodeElement(preElement)
+    if (!codeElement) return
 
     const lang = getLang(codeElement)
     if (!lang || !Prism.languages[lang]) return
@@ -38,13 +41,12 @@ export function parseCodeVisitor(options?: RehypePrismOptions): Visitor<ElementC
 
     codeElement.children = [...tree.children]
 
-    if (options?.plugins) {
-      applyPlugin(options.plugins, {
-        preElement,
-        codeElement,
-        raw,
-        lang,
-      })
-    }
+    applyPlugin({
+      parentNode,
+      index,
+      preElement,
+      raw,
+      lang,
+    })
   }
 }

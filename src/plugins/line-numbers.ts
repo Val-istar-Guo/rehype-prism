@@ -1,6 +1,7 @@
 import { h } from 'hastscript'
-import { appendClassName } from '@/utils/append-class-name.js'
 import { Plugin } from '@/interface/plugin.js'
+import { appendClassName } from '@/utils/append-class-name.js'
+import { selectCodeElement } from '@/utils/select-code-element.js'
 
 
 function getLineNumber(str: string): number {
@@ -8,19 +9,24 @@ function getLineNumber(str: string): number {
   return match ? match.length + 1 : 1
 }
 
-export const applyLineNumberPlugin: Plugin = options => {
-  const { preElement, codeElement, raw } = options
+export function createLineNumberPlugin(): Plugin {
+  return options => {
+    const { preElement, raw } = options
 
-  appendClassName(preElement, 'line-numbers')
+    const codeElement = selectCodeElement(preElement)
+    if (!codeElement) return
 
-  const lineNumber = getLineNumber(raw)
-  const lineNumberColumn = h(
-    'span',
-    {
-      'aria-hidden': 'true',
-      className: ['line-numbers-rows'],
-    },
-    new Array(lineNumber).fill(h('span')),
-  )
-  codeElement.children.push(lineNumberColumn)
+    appendClassName(preElement, 'line-numbers')
+
+    const lineNumber = getLineNumber(raw)
+    const lineNumberColumn = h(
+      'span',
+      {
+        'aria-hidden': 'true',
+        className: ['line-numbers-rows'],
+      },
+      new Array(lineNumber).fill(h('span')),
+    )
+    codeElement.children.push(lineNumberColumn)
+  }
 }

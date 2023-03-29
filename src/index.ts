@@ -4,8 +4,8 @@ import { Element } from 'hast'
 import { visit } from 'unist-util-visit'
 import { Test } from 'unist-util-is'
 import { RehypePrismOptions } from './interface/rehype-prism-options.js'
-import { preElementSelector } from './pre-element-selector.js'
-import { parseCodeVisitor } from './parse-code-vistor.js'
+import { createPreElementSelector } from './create-pre-element-selector.js'
+import { createParseCodeVisitor } from './create-parse-code-vistor.js'
 import { internalPlugins } from './constant.js'
 
 
@@ -21,8 +21,8 @@ const rehypePrism: unifiedTypes.Plugin<[RehypePrismOptions?], Element> = (option
 
   return tree => visit<Element, Test>(
     tree,
-    preElementSelector(),
-    parseCodeVisitor(options),
+    createPreElementSelector(),
+    createParseCodeVisitor(options),
   )
 }
 

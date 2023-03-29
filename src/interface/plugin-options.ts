@@ -1,9 +1,10 @@
-import { Element } from 'hast'
+import { Element, Parent } from 'hast'
 
 
 export interface PluginOptions {
   preElement: Element
-  codeElement: Element
+  index: number
+  parentNode: Parent
 
   raw: string
   lang: string

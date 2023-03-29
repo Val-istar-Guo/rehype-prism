@@ -77,7 +77,20 @@ rehype()
 
 The names to use can be found [here](https://github.com/PrismJS/prism/tree/master/plugins).
 
-> line-number plugin is reimplemented by rehype-prism
+### Plugins Reimplemented By rehype-prism
+
+The table list plugins that cannot running on the server side.
+Therefor it has been re-implemented by rehype-prism.
+
+| Plugin Name       |
+|:------------------|
+| line-numbers      |
+| toolbar           |
+| copy-to-clipboard |
+
+> I haven't tested all prism plugins.
+> If there are another plugins not work,
+> submit issue on github.
 
 ## Load More Languages
 
