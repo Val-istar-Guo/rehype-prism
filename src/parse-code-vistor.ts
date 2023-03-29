@@ -1,16 +1,16 @@
 import Prism from 'prismjs'
 import rehypeParse from 'rehype-parse'
 import { Element, Parent, ElementContent } from 'hast'
-import { Text } from 'mdast'
 import { Visitor } from 'unist-util-visit/complex-types'
 import { unified } from 'unified'
-import { h } from 'hastscript'
 import { select } from 'unist-util-select'
-import { getLang } from './get-lang.js'
-import { Checker } from './checker.js'
-import { appendClassName } from './append-class-name.js'
-import { getLineNumber } from './get-line-number.js'
-import { RehypePrismOptions } from './rehype-prism-options.js'
+import { getLang } from './utils/get-lang.js'
+import { appendClassName } from './utils/append-class-name.js'
+import { RehypePrismOptions } from './interface/rehype-prism-options.js'
+
+import { isElementNode } from './utils/is-element-node.js'
+import { isTextNode } from './utils/is-text-node.js'
+import { applyPlugin } from './plugins/apply-plugin.js'
 
 
 const parser = unified()
@@ -18,40 +18,33 @@ const parser = unified()
 
 export function parseCodeVisitor(options?: RehypePrismOptions): Visitor<ElementContent, Parent> {
   return node => {
-    if (!Checker.isElement(node) || node.tagName !== 'pre') return
-    const preNode = node
+    if (!isElementNode(node) || node.tagName !== 'pre') return
+    const preElement = node
 
-    const codeNode = select('[tagName=code]', preNode)
-    if (!Checker.isElement(codeNode)) return
+    const codeElement = select('[tagName=code]', preElement)
+    if (!isElementNode(codeElement)) return
 
-    const lang = getLang(codeNode)
+    const lang = getLang(codeElement)
     if (!lang || !Prism.languages[lang]) return
 
-    const textNode = select('text', codeNode) as (Text | null)
-    if (!Checker.isText(textNode)) return
+    const textNode = select('text', codeElement)
+    if (!isTextNode(textNode)) return
+    const raw = textNode.value
 
-    const codeText = textNode.value
-
-    const html = Prism.highlight(codeText, Prism.languages[lang], lang)
+    const html = Prism.highlight(raw, Prism.languages[lang], lang)
     const tree = parser.parse(html) as unknown as Element
 
-    appendClassName(preNode, `language-${lang}`)
+    appendClassName(preElement, `language-${lang}`)
 
-    codeNode.children = [...tree.children]
+    codeElement.children = [...tree.children]
 
-    if (options?.plugins?.includes('line-numbers')) {
-      appendClassName(preNode, 'line-numbers')
-
-      const lineNumber = getLineNumber(codeText)
-      const lineNumberColumn = h(
-        'span',
-        {
-          'aria-hidden': 'true',
-          className: ['line-numbers-rows'],
-        },
-        new Array(lineNumber).fill(h('span')),
-      )
-      codeNode.children.push(lineNumberColumn)
+    if (options?.plugins) {
+      applyPlugin(options.plugins, {
+        preElement,
+        codeElement,
+        raw,
+        lang,
+      })
     }
   }
 }

@@ -1,7 +1,15 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "eslint.validate": [
     "typescript",
     "typescriptreact"
+  ],
+  "cSpell.words": [
+    "mdast",
+    "rehype",
+    "unist"
   ]
 }

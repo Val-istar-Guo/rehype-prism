@@ -8,7 +8,3 @@ export type RehypePrismPlugin = (
   'show-invisibles' | 'show-language' | 'toolbar' | 'treeview' |
   'unescaped-markup' | 'wpd'
 )
-
-export interface RehypePrismOptions {
-  plugins?: RehypePrismPlugin[]
-}

@@ -1,7 +1,7 @@
 import { Test } from 'unist-util-is'
-import { Checker } from './checker.js'
+import { isElementNode } from './utils/is-element-node.js'
 
 
 export function preElementSelector(): Test {
-  return node => Checker.isElement(node) && node.tagName === 'pre'
+  return node => isElementNode(node) && node.tagName === 'pre'
 }
