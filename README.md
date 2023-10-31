@@ -6,11 +6,13 @@
 <!-- <h1 align="center" style="text-align: center">REHYPE-PRISM</h1> -->
 <!-- title -->
 
-[![version](https://img.shields.io/npm/v/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
-[![downloads](https://img.shields.io/npm/dm/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
-[![license](https://img.shields.io/npm/l/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
-[![dependencies](https://img.shields.io/librariesio/github/Val-istar-Guo/rehype-prism.svg?style=flat-square)](https://www.npmjs.com/package/rehype-prism)
-[![coveralls](https://img.shields.io/coveralls/github/Val-istar-Guo/rehype-prism.svg?style=flat-square)](https://coveralls.io/github/Val-istar-Guo/rehype-prism)
+
+[![version](https://img.shields.io/npm/v/rehype-prism.svg?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![downloads](https://img.shields.io/npm/dm/rehype-prism.svg?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![license](https://img.shields.io/npm/l/rehype-prism.svg?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![dependencies](https://img.shields.io/librariesio/release/npm/rehype-prism?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![coveralls](https://img.shields.io/coveralls/github/Val-istar-Guo/rehype-prism.svg?style=for-the-badge)](https://coveralls.io/github/Val-istar-Guo/rehype-prism)
+
 
 <!-- description -->
 
