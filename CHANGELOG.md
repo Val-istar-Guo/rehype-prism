@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+## [2.3.0](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.2.2...v2.3.0) (2023-10-31)
+
+
+### Features
+
+* add support for unified@11 ([92fae7c](https://www.github.com/Val-istar-Guo/rehype-prism/commit/92fae7c23dc7261d95b1e524fda38b260af3a417))
+* update shields ([bab97b7](https://www.github.com/Val-istar-Guo/rehype-prism/commit/bab97b7c4895eb5887a1d43bd087fee47f6d41aa))
+
 ### [2.2.2](https://www.github.com/Val-istar-Guo/rehype-prism/compare/v2.2.1...v2.2.2) (2023-03-29)
 
 
