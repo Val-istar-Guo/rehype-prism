@@ -1,16 +1,16 @@
+import { Element, ElementContent, Parent } from 'hast'
 import Prism from 'prismjs'
 import rehypeParse from 'rehype-parse'
-import { Element, Parent, ElementContent } from 'hast'
-import { Visitor } from 'unist-util-visit/complex-types'
 import { unified } from 'unified'
 import { select } from 'unist-util-select'
-import { getLang } from './utils/get-lang.js'
-import { appendClassName } from './utils/append-class-name.js'
+import { Visitor } from 'unist-util-visit'
 import { RehypePrismOptions } from './interface/rehype-prism-options.js'
+import { appendClassName } from './utils/append-class-name.js'
+import { getLang } from './utils/get-lang.js'
 
+import { createPluginApplier } from './create-plugin-applier.js'
 import { isElementNode } from './utils/is-element-node.js'
 import { isTextNode } from './utils/is-text-node.js'
-import { createPluginApplier } from './create-plugin-applier.js'
 import { selectCodeElement } from './utils/select-code-element.js'
 
 

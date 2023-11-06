@@ -1,7 +1,7 @@
 import { h } from 'hastscript'
-import { Plugin } from '@/interface/plugin.js'
-import { appendClassName } from '@/utils/append-class-name.js'
-import { selectCodeElement } from '@/utils/select-code-element.js'
+import { Plugin } from '~/interface/plugin.js'
+import { appendClassName } from '~/utils/append-class-name.js'
+import { selectCodeElement } from '~/utils/select-code-element.js'
 
 
 function getLineNumber(str: string): number {
@@ -10,7 +10,7 @@ function getLineNumber(str: string): number {
 }
 
 export function createLineNumberPlugin(): Plugin {
-  return options => {
+  return (options) => {
     const { preElement, raw } = options
 
     const codeElement = selectCodeElement(preElement)

@@ -1,5 +1,5 @@
 import { h } from 'hastscript'
-import { PluginContext } from '@/interface/plugin-context.js'
+import { PluginContext } from '~/interface/plugin-context.js'
 
 interface Setting {
   'copy': 'Copy'
@@ -14,15 +14,15 @@ function createClickCallback(str: string, setting: Setting): string {
     const span = button.querySelector('span')
 
     function setState(state) {
-			span.textContent = setting[state];
-			button.setAttribute('data-copy-state', state);
+      span.textContent = setting[state];
+      button.setAttribute('data-copy-state', state);
     }
 
     function resetButtonText() {
-			setTimeout(function () {
+      setTimeout(function () {
         setState('copy');
       }, setting['copy-timeout']);
-		}
+    }
 
     function onSuccess() {
       setState('copy-success');
