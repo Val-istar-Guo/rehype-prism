@@ -1,6 +1,6 @@
 {
   "name": "rehype-prism",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "The unified plugin used to highlight code block in html with Prism",
   "keywords": [
     "rehype",
