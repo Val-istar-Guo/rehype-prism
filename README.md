@@ -7,11 +7,11 @@
 <!-- title -->
 
 
-[![version](https://img.shields.io/npm/v/rehype-prism.svg?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
-[![downloads](https://img.shields.io/npm/dm/rehype-prism.svg?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
-[![license](https://img.shields.io/npm/l/rehype-prism.svg?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
-[![dependencies](https://img.shields.io/librariesio/release/npm/rehype-prism?style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
-[![coveralls](https://img.shields.io/coveralls/github/Val-istar-Guo/rehype-prism.svg?style=for-the-badge)](https://coveralls.io/github/Val-istar-Guo/rehype-prism)
+[![version](https://img.shields.io/npm/v/rehype-prism.svg?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![downloads](https://img.shields.io/npm/dm/rehype-prism.svg?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![dependencies](https://img.shields.io/librariesio/release/npm/rehype-prism?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![license](https://img.shields.io/npm/l/rehype-prism.svg?logo=github&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
+[![Codecov](https://img.shields.io/codecov/c/gh/Val-istar-Guo/rehype-prism?logo=codecov&token=PWMEC8L6DN&style=for-the-badge)](https://codecov.io/gh/Val-istar-Guo/rehype-prism)
 
 
 <!-- description -->
@@ -107,13 +107,6 @@ Therefor it has been re-implemented by rehype-prism.
 
 <!-- usage -->
 
-<!-- addition -->
-
-If in doubt, please submit an issue.
-
-<!-- addition -->
-
 ## Contributing & Development
 
 If there is any doubt, it is very welcome to discuss the issue together.
-Please read [Contributor Covenant Code of Conduct](.github/CODE_OF_CONDUCT.md) and [CONTRIBUTING](.github/CONTRIBUTING.md).
