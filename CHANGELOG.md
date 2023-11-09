@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="0.1.1"></a>
+## [2.3.2](https://github.com/Val-istar-Guo/rehype-prism/compare/v2.3.1...v2.3.2) (2023-11-09)
+
+
+### Performance Improvements
+
+* add npm provenance ([a7d0635](https://github.com/Val-istar-Guo/rehype-prism/commit/a7d063508755d15a43a64c30ab7d984f877bb1a1))
+
 ## [2.3.1](https://github.com/Val-istar-Guo/rehype-prism/compare/v2.3.0...v2.3.1) (2023-11-06)
 
 
