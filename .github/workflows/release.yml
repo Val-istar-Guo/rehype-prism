@@ -4,6 +4,8 @@ on:
       - master
       - main
 name: Release
+permissions:
+  id-token: write
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -23,7 +25,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: corepack pnpm i
         if: ${{ steps.release.outputs.release_created }}
-      - run: corepack pnpm publish
+      - run: corepack pnpm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
