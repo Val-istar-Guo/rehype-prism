@@ -6,13 +6,11 @@
 <!-- <h1 align="center" style="text-align: center">REHYPE-PRISM</h1> -->
 <!-- title -->
 
-
 [![version](https://img.shields.io/npm/v/rehype-prism.svg?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
 [![downloads](https://img.shields.io/npm/dm/rehype-prism.svg?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
 [![dependencies](https://img.shields.io/librariesio/release/npm/rehype-prism?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
 [![license](https://img.shields.io/npm/l/rehype-prism.svg?logo=github&style=for-the-badge)](https://www.npmjs.com/package/rehype-prism)
 [![Codecov](https://img.shields.io/codecov/c/gh/Val-istar-Guo/rehype-prism?logo=codecov&token=PWMEC8L6DN&style=for-the-badge)](https://codecov.io/gh/Val-istar-Guo/rehype-prism)
-
 
 <!-- description -->
 
@@ -27,38 +25,35 @@ The unified plugin used to highlight code block in html with Prism.
 This package is ESM only. [unified >= 10](https://www.npmjs.com/package/unified) is needed to use it. If running on the server side, NodeJS needs to be greater than 12
 
 ```typescript
-import { unified } from 'unified'
-import rehype from 'rehype'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypePrism from 'rehype-prism'
-import rehypeStringify from 'rehype-stringify'
+import { unified } from "unified";
+import rehype from "rehype";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
+import rehypePrism from "rehype-prism";
+import rehypeStringify from "rehype-stringify";
 
 // you have to load css manual
-import 'prismjs/themes/prism-coy.css'
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import "prismjs/themes/prism-coy.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 // load languages manual
 // import 'prismjs/components/prism-{language}'
-import 'prismjs/components/prism-go'
-import 'prismjs/components/prism-java'
-import 'prismjs/components/prism-python'
+import "prismjs/components/prism-go";
+import "prismjs/components/prism-java";
+import "prismjs/components/prism-python";
 
 // parse markdown to html
 unified()
   .use(remarkParse)
   .use(remarkRehype)
   // it should be after rehype
-  .use(rehypePrism, { plugins: ['line-numbers'] })
+  .use(rehypePrism, { plugins: ["line-numbers"] })
   .use(rehypeStringify)
-  .parse(/* markdown string */)
+  .parse(/* markdown string */);
 // .processSync(/* markdown string */)
 
 // parse code block in html string
-rehype()
-  .use(rehypePrism)
-  .use(rehypeStringify)
-  .parse(/* html string */)
+rehype().use(rehypePrism).use(rehypeStringify).parse(/* html string */);
 // .processSync(/* html string */)
 ```
 
@@ -85,7 +80,7 @@ The table list plugins that cannot running on the server side.
 Therefor it has been re-implemented by rehype-prism.
 
 | Plugin Name       |
-|:------------------|
+| :---------------- |
 | line-numbers      |
 | toolbar           |
 | copy-to-clipboard |
@@ -96,8 +91,9 @@ Therefor it has been re-implemented by rehype-prism.
 
 ## Load More Languages
 
-- Use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).(Recommend)
+- Use [babel-plugin-prismjs](https://www.npmjs.com/package/babel-plugin-prismjs).
 - Use `loadLanguages()` provided by `prismjs`.(don't use `loadLanguages()` with Webpack or another bundler)
+- Import language manual. e.g. `import 'prismjs/components/prism-yaml.js'`
 
 ## Load Themes
 
