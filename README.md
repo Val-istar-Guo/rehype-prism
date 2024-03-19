@@ -101,6 +101,13 @@ Therefor it has been re-implemented by rehype-prism.
   `import 'prismjs'` will auto load the theme setted in babel-plugin-prismjs config.
 - Import theme css manual. e.g. `import 'prismjs/themes/prism-coy.css'`
 
+## See More
+
+[shiki](https://github.com/shikijs/shiki) is another code highlight tools that support [unified](https://www.npmjs.com/package/unified).
+I recommend you try it. It's new, but better suited for modern front-end projects than Prismjs.
+
+This does not mean that I will give up maintaining this library. If you need this library and have any issue, let me know it.
+
 <!-- usage -->
 
 ## Contributing & Development
